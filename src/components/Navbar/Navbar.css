@@ -1,0 +1,44 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 10px);
+    padding: 30px 5px;
+}
+
+.book-image {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-paragraph {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.down-image {
+    width: 30px;
+    height: 30px;
+}
+
+.flex hr {
+    height: calc(100% - 20px);
+    width: 0px;
+    border-color: var(--light-gray);
+}
+
+.switch-image {
+    height: 40px;
+    width: 40px;
+}
+
+.moon-image {
+    width: 25px;
+    height: 25px;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        padding: 30px 20px;
+        width: calc(100% - 40px);
+    }
+}

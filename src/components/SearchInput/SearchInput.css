@@ -1,0 +1,39 @@
+.search-container {
+    width: calc(100% - 10px);
+    padding: 30px 5px;
+    position: relative;
+}
+
+.input {
+    width: calc(100% - 60px);
+    background-color: var(--light-gray);
+    border: none;
+    font-size: 30px;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.search-button {
+    cursor: pointer;
+}
+
+.search-image {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 45px;
+}
+
+@media screen and (min-width: 768px) {
+    .search-container  {
+        padding: 30px 20px;
+    }
+    .input {
+        font-size: 40px;
+    }
+    .search-image {
+        top: 50px;
+        right: 20px;
+    }
+}
