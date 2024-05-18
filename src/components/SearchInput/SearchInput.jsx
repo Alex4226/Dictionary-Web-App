@@ -10,10 +10,12 @@ const SearchInput = (props) => {
 
         const inputValue = formData.get('word');
 
-        const serverResponse = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`);
-        const parsedData = await serverResponse.json();
+        if(inputValue.length > 0) {
+            const serverResponse = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`);
+            const parsedData = await serverResponse.json();
 
-        props.setWordData(parsedData);
+            props.setWordData(parsedData);
+        }
     };
 
     return (

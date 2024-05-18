@@ -3,13 +3,12 @@ import WordMeaning from '../WordMeaning/WordMeaning';
 import Play from '../../assets/play.png';
 import Copy from '../../assets/copy.png';
 import { toast } from "react-toastify";
-import { useRef } from "react";
 import copy from "copy-to-clipboard";
 
 const WordDescription = (props) => {
 
-    const handleCopy = () => {
-        let copyText = props.wordData[0].sourceUrls;
+    const handleCopy = (link) => {
+        let copyText = link;
 
         let isCopy = copy(copyText);
 
@@ -36,11 +35,15 @@ const WordDescription = (props) => {
             <hr />
             <div className='source-container'>
                 <p className='source'>Source</p>
-                <div className='flex'>
-                    <a href={props.wordData[0].sourceUrls}> {props.wordData[0].sourceUrls} </a>
-                    <button className='copy' onClick={handleCopy}>
-                        <img src={Copy} alt="copy" />
-                    </button>
+                <div className='links-container'>
+                    {props.wordData[0].sourceUrls.map((element, index) => (
+                        <div className='flex link-container' key={index}>
+                            <a href={element}> {element} </a>
+                            <button className='copy' onClick={() => handleCopy(element)}>
+                                <img src={Copy} alt="copy" />
+                            </button>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

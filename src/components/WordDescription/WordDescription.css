@@ -41,8 +41,19 @@
     margin-bottom: 5px;
 }
 
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.link-container {
+    width: calc(100% - 40px);
+}
+
 .word-container a {
     color: var(--dark-gray);
+    font-size: 14px;
 }
 
 .copy {

@@ -1,7 +1,7 @@
 import './WordMeaning.css'
 
 const WordMeaning = (props) => {
-    console.log(props);
+    // console.log(props);
     return (
         <div className="meaning-container">
             <div className="part-of-speech">
@@ -10,8 +10,8 @@ const WordMeaning = (props) => {
             </div>
             <p className='meaning'>Meaning</p>
             <ul>
-                {props.meaning.definitions.map((element) => (
-                    <div className='definition-container'>
+                {props.meaning.definitions.map((element, index) => (
+                    <div className='definition-container' key={index}>
                         <div className='list-item'>
                             <li> {element.definition} </li>
                         </div>
@@ -27,8 +27,8 @@ const WordMeaning = (props) => {
                 <div className='synonyms-container'>
                     <p>Synonyms</p>
                     <div className='synonyms-list'>
-                        {props.meaning.synonyms.map((element) => (
-                            <p> {element} </p>
+                        {props.meaning.synonyms.map((element, index) => (
+                            <p key={index}> {element} </p>
                         ))}
                     </div>
                 </div>

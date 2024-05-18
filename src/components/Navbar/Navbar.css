@@ -1,13 +1,20 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    width: calc(100% - 10px);
-    padding: 30px 5px;
+    width: calc(100% - 32px);
+    padding: 30px 16px;
 }
 
 .book-image {
     width: 50px;
     height: 50px;
+}
+
+select {
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    width: 80px;
 }
 
 .nav-paragraph {
@@ -29,6 +36,17 @@
 .switch-image {
     height: 40px;
     width: 40px;
+}
+
+.change-theme-button {
+    border: none;
+    
+    background-color: rgba(0, 0, 0, 0%);
+}
+
+.change-theme-button svg {
+    width: 30px;
+    height: 30px;
 }
 
 .moon-image {
