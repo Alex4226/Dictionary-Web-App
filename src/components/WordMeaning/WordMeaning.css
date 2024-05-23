@@ -13,6 +13,7 @@
     line-height: 13px;
     font-weight: 600;
     font-size: 22px;
+    color: var(--dark-gray);
 }
 
 .part-of-speech hr {
@@ -36,7 +37,7 @@ li::marker {
 
 .list-item {
     padding: 0px 20px;
-    color: var(--black);
+    color: var(--dark-gray);
 }
 
 li {

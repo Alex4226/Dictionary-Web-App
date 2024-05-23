@@ -7,6 +7,8 @@ import copy from "copy-to-clipboard";
 
 const WordDescription = (props) => {
 
+    const handleAudio = () => props.isAudio === true? props.setAudio(false) : props.setAudio(true);
+
     const handleCopy = (link) => {
         let copyText = link;
 
@@ -17,6 +19,8 @@ const WordDescription = (props) => {
         }
     };
 
+    console.log(props);
+
     return (
         <div className="word-container">
             <div className='flex word-description'>
@@ -24,11 +28,16 @@ const WordDescription = (props) => {
                     <h1>{props.wordData[0].word}</h1>
                     <p>{props.wordData[0].phonetic}</p>
                 </div>
-                <button className='play-button'>
+                {props.isAudio === true? 
+                <audio controls>
+                    {props.wordData[0].phonetics.map((element, index) => (<source key={index} src={element.audio} />))}
+                </audio> : 
+                <button className='play-button' onClick={handleAudio}>
                     <img className='play-icon' src={Play} alt="play" />
-                </button>
+                </button> }
+                
+                
             </div>
-            
               
             {props.wordData[0].meanings.map((element) => ( <WordMeaning key={element.partOfSpeech} meaning={element} /> ))}
         

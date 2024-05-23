@@ -23,7 +23,6 @@ body {
 
 #root {
   width: 100%;
-  max-width: 750px;
   background-color: var(--white);
   /* height: 100vh; */
 }
@@ -54,7 +53,7 @@ body {
   --white: #000;
   --light-gray: #1f1f1f;
   --magenta: #9D62C4;
-  --light-magenta: #E8D0FA;
+  --light-magenta: #9D62C4;
   --gray: #7A7A7A;
   --dark-gray: #FFF;
   --black: #FFF;

@@ -16,6 +16,8 @@ const SearchInput = (props) => {
 
             props.setWordData(parsedData);
         }
+
+        props.setAudio(false);
     };
 
     return (
