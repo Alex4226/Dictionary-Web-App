@@ -8,6 +8,7 @@
 .book-image {
     width: 50px;
     height: 50px;
+    color: var(--black);
 }
 
 select {
@@ -15,6 +16,12 @@ select {
     font-size: 20px;
     font-weight: 600;
     width: 80px;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+select:active {
+    border-color: red;
 }
 
 .nav-paragraph {
@@ -40,7 +47,6 @@ select {
 
 .change-theme-button {
     border: none;
-    
     background-color: rgba(0, 0, 0, 0%);
 }
 
@@ -49,9 +55,14 @@ select {
     height: 30px;
 }
 
+.toggled-icon {
+    color: var(--dark-gray);;
+}
+
 .moon-image {
     width: 25px;
     height: 25px;
+    color: var(--black);
 }
 
 @media screen and (min-width: 768px) {

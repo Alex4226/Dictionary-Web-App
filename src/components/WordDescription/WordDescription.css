@@ -9,6 +9,7 @@
 
 .word-description h1 {
     font-size: 50px;
+    color: var(--dark-gray);
 }
 
 .word-description p {

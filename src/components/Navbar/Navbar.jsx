@@ -1,9 +1,9 @@
 import './Navbar.css';
-import Book from '../../assets/book.png';
-import Moon from '../../assets/moon.png';
+// import Book from '../../assets/book.png';
+import BookIcon from '@mui/icons-material/Book';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import ToggleOnIcon from '@mui/icons-material/ToggleOn';
-import { useState } from 'react';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 
 const Navbar = (props) => {
     
@@ -21,24 +21,25 @@ const Navbar = (props) => {
 
     return (
         <nav className='navbar'>
-            <img className='book-image' src={Book} alt="" />
+            {/* <img className='book-image' src={Book} alt="" /> */}
+            <BookIcon className='book-image' />
             <div className='flex'>
                 <div className='flex'>
-                    <form onChange={handleSelect}>
-                        <select name="font" id="font">
-                            <option value="Serif">Serif</option>
-                            <option value="Arial">Arial</option>
-                            <option value="Times">Times new Roman</option>
-                            <option value="Roboto">Roboto</option>
+                        <select onChange={handleSelect} name="font" id="font">
+                            <option value="serif">Serif</option>
+                            <option value="arial">Arial</option>
+                            <option value="times">Times new Roman</option>
+                            <option value="roboto">Roboto</option>
                         </select>
-                    </form>
                 </div>
                 <hr />
                 <div className='flex'>
                     <button className='change-theme-button' onClick={handleChangeTheme}>
-                        {props.isDarkTheme === true ? (<ToggleOnIcon />) : (<ToggleOffIcon />)}
+                        {props.isDarkTheme === true ? 
+                        (<ToggleOnIcon className={props.isDarkTheme === true ? "toggled-icon" : null}/>) 
+                        : (<ToggleOffIcon className={props.isDarkTheme === true ? "toggled-icon" : null}/>)}
                     </button>
-                    <img className='moon-image' src={Moon} alt="" />
+                    <DarkModeOutlinedIcon className='moon-image'/>
                 </div>
             </div>
         </nav>
